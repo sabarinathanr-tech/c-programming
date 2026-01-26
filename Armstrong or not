@@ -16,10 +16,10 @@ int main()
         n/=10;
     }
     if(temp==sum){
-        printf("It is an amstrong number");
+        printf("It is an armstrong number");
     }
     else{
-        printf("Its is not an amstrong number");
+        printf("Its is not an armstrong number");
     }
 
     return 0;
