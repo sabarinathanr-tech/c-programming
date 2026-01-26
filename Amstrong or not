@@ -1,13 +1,18 @@
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
-    int n,sum=0;
+    int n,cnt=0,sum=0;
     scanf("%d",&n);
-    int temp=n;
+    int temp=n,t=n;
+    while(t>0){
+        cnt++;
+        t/=10;
+    }
     while(n>0){
         int last=n%10;
-        sum+=last*last*last;
+        sum+=pow(last,cnt);
         n/=10;
     }
     if(temp==sum){
