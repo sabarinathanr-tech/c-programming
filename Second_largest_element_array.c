@@ -14,7 +14,7 @@ int main()
 			secmax=max;
 			max=arr[i];
 		}
-		else if(arr[i]>max&&arr[i]<secmax) {
+		else if(arr[i]>secmax && arr[i]!=max) {
 			secmax=arr[i];
 		}
 
