@@ -3,27 +3,20 @@
 int main()
 {
 	int row,col;
-
 	scanf("%d %d",&row,&col);
-
 	int arr[row][col];
 
-	for(int i=0; i<row; i++) {
+	for (int i=0; i<row; i++) {
 		for(int j=0; j<col; j++) {
 			scanf("%d",&arr[i][j]);
 		}
 	}
-	int sumdiag=0,secdiag=0;
+	int sum=0;
 	for(int i=0; i<row; i++) {
-		for(int j=0; j<col; j++) {
-			if(i==j) {
-				sumdiag+=arr[i][j];
-			}
-			if(j==row-i-1) {
-				secdiag+=arr[i][j];
-			}
-		}
+		sum+=arr[i][i];
+		sum+=arr[i][row-i-1];
 	}
-  printf("%d",sumdiag+secdiag);
+	sum-=arr[row/2][row/2];
+	printf("%d",sum);
 	return 0;
 }
