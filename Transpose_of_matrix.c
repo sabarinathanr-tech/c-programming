@@ -11,15 +11,15 @@ int main()
 			scanf("%d",&arr[i][j]);
 		}
 	}
-	int t[row][col];
+	int t[col][row];
 	for(int i=0; i<row; i++) {
 		for(int j=0; j<col; j++) {
 			t[j][i]=arr[i][j];
 		}
 	}
 	printf("\n");
-	for(int i=0; i<row; i++) {
-		for(int j=0; j<col; j++) {
+	for(int i=0; i<col; i++) {
+		for(int j=0; j<row; j++) {
 			printf("%d ",t[i][j]);
 		}
 		printf("\n");
