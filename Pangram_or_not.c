@@ -18,11 +18,11 @@ int main()
 	}
 	for(int i=0; i<26; i++) {
 		if(freq[i]==0) {
-			printf("Not Panagram");
+			printf("Not Pangram");
 			return 0;
 		}
 	}
-	printf("Panagram");
+	printf("Pangram");
 
 
 
