@@ -1,34 +1,24 @@
 #include <stdio.h>
 
-int main(){
-    int n;
-    scanf("%d",&n);
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int arr[n];
+	int freq[256]= {0};
 
-    int a[n];
+	for(int i=0; i<n; i++) {
+		scanf("%d",&arr[i]);
+		freq[arr[i]]++;
+	}
 
-    for(int i=0;i<n;i++)
-        scanf("%d",&a[i]);
+	for(int i=0; i<256; i++) {
+		if(freq[arr[i]]!=0) {
+			printf("%d : %d\n",arr[i],freq[arr[i]]);
+			freq[arr[i]]=0;
+		}
+	}
 
-    for(int i=0;i<n;i++){
-        int count = 0;
-        int flag = 0;
-        
-        for(int k=0;k<i;k++){
-            if(a[i] == a[k]){
-                flag = 1;
-                break;
-            }
-        }
 
-        if(flag) continue;
-
-        for(int j=0;j<n;j++){
-            if(a[i] == a[j])
-                count++;
-        }
-
-        printf("%d : %d\n", a[i], count);
-    }
-
-    return 0;
+	return 0;
 }
