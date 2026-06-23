@@ -14,6 +14,8 @@ int main()
         arr[i]=arr[i-1];
     }
     arr[0]=last;
+
+    
     for(int i=0;i<n;i++){
         printf("%d ",arr[i]);
     }
